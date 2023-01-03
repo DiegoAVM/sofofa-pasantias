@@ -14,8 +14,16 @@ divMul = math.trunc(division)*11 #Acá quitamos los decimales y la aproximación
 resta6 = multiplicacionYSuma - divMul #Acá se está restando las variables
 resultado = 11-resta6 #Acá se da el digito verificador
 if resultado == 11:
+    resultado = 0
     print("su digito verificador es: 0")
 elif resultado == 10:
+    resultado = "k"
     print("su digito verificador es: k")
 else:
     print ("su digito verificador es:" + str(resultado))
+
+def crearTxt():
+    archivo.write(str(num1) + str(num2) + str(num3) + str(num4) + str(num5) +  str(num6) + str(num7) + str(num8) +"-"+ str(resultado) + " \ " )
+    archivo.close()
+archivo = open("Rut.txt","a")
+crearTxt()
